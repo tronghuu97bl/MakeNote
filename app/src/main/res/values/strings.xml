@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ddm</string>
+    <string name="nav_personal">Personal</string>
+    <string name="nav_friend">Friend</string>
+    <string name="nav_group">Group</string>
+    <string name="nav_work">Work</string>
+    <string name="nav_setting">Setting</string>
+    <string name="nav_about">About</string>
+    <string name="app3_tv">Make Note</string>
+    <string name="title_tab1">Note</string>
+    <string name="title_tab2">Work</string>
+</resources>
