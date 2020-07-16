@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.tth.makenote.R;
+import com.tth.makenote.fragment.HomeListFragment;
+import com.tth.makenote.fragment.HomeRecyclerFragment;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,17 +26,27 @@ public class TabAdapter extends FragmentPagerAdapter {
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return PlaceholderFragment.newInstance(position);
+        switch (position){
+            case 0:
+                return HomeRecyclerFragment.newInstance("0","HOME");
+            case 1:
+                return HomeListFragment.newInstance("1", "DETAIL");
+            default:
+                return HomeListFragment.newInstance("0","HOME");
+        }
+
     }
 
     @Nullable
     @Override //ok
     public CharSequence getPageTitle(int position) {
         switch (position) {
+            case 0:
+                return "HOME";
             case 1:
-                return String.valueOf(R.string.title_tab2);
+                return "DETAIL";
             default:
-                return String.valueOf(R.string.title_tab1);
+                return "HOME";
         }
     }
 
